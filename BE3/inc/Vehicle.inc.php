@@ -21,8 +21,8 @@ class Vehicle {
     }
     
     public function honk() {
-        return sprintf("<span class='%s'>%s</span>\n"
-                , $this->getType(), $this->getTone());
+        return sprintf("%s\n"
+                , $this->getTone());
     }
     
     public function whoami() {
