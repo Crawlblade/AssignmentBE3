@@ -9,7 +9,7 @@ class LiveLecture extends Product {
     protected $duration;
     protected $topic;
 
-    public function __construct($type, $title, $lecturer, $duration, $topic) {
+    public function __construct($type, $title, $duration, $lecturer, $topic) {
         $this->type = $type;
         $this->title = $title;
         $this->duration = $duration;
@@ -18,22 +18,24 @@ class LiveLecture extends Product {
     }
 
     public function getLecturer() {
-        return $this->$lecturer;
+        return $this->lecturer;
     }
 
     public function getDuration() {
-        return $this->$duration;
+        return $this->duration;
     }
 
     public function getTopic() {
-        return $this->$topic;
+        return $this->topic;
     }
 
     public function display() {
-        sprintf("<p>%s</p>\n"
+        printf("<p>Lecturer: %s <br> Title: %s <br> Duration: %s <br> Topic: %s <br> Type: %s</p>\n"
         , $this->getLecturer()
+        , $this->getTitle()
         , $this->getDuration()
-        , $this->getTopic());
-
+        , $this->getTopic()
+        , $this->getProductType());
+        
     }
 }
