@@ -2,7 +2,8 @@
 /**
  * Description of Vehicle
  *
- * @author nml
+ *@author nml
+ *edited by KJK 
  */
 
 class Vehicle {
